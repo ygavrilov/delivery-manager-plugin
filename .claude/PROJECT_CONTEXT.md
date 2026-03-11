@@ -28,6 +28,31 @@ Discovery
 - Admin CMS access — available (client has it)
 - Team interest is experimental (AI tooling); compensation modest but present
 
+## Site Structure
+
+### Public pages
+| URL | Page |
+|-----|------|
+| `/` | Home — hero, social links, featured products, CTA |
+| `/sauces` | Sauces — product grid |
+| `/sauces/:slug` | Sauce detail — photos, description, SEO text |
+| `/peppers` | Peppers — product grid |
+| `/peppers/:slug` | Pepper detail — photos, description, SEO text |
+| `/where-to-buy` | Where to buy — store addresses, filter by city |
+| `/faq` | FAQ — with FAQPage Schema markup |
+
+### Mobile bottom nav
+Главная · Соусы · Перцы · Где купить · Позвонить · WhatsApp
+
+### Admin (private)
+| URL | Manages |
+|-----|---------|
+| `/admin/sauces` | Sauce catalog |
+| `/admin/peppers` | Pepper catalog |
+| `/admin/faq` | FAQ entries |
+| `/admin/stores` | Store addresses |
+| `/admin/seo` | SEO globals (title, description, footer text) |
+
 ## Scope — Phase 1
 - Nuxt SSR rebuild (existing design)
 - Admin panel: SEO globals, FAQ page, store locations, product catalog
