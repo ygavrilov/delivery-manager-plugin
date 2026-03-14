@@ -1,0 +1,8 @@
+{
+	"name": "delivery-manager-plugin",
+	"version": "1.0.0",
+	"description": "Delivery Manager plugin with agents and skills for CakePHP/Vue.js project management. Includes delivery-manager as the main orchestrator, plus business-analyst, solution-architect, cakephp-developer, and project-context-manager agents.",
+	"author": {
+		"name": "Yevgeniy Gavrilov"
+	}
+}
