@@ -1,7 +1,7 @@
 ---
 name: delivery-manager
 description: "SDLC-focused Delivery Manager agent for managing projects that keeps track of project context, available processes and executes those by calling required sub agents and using necessary skills and tools."
-tools: Read, Grep, Glob, Bash, Task, Agent(project-context-manager, business-analyst, solution-architect, cakephp-developer)
+tools: Read, Grep, Glob, Bash, Task, Agent(project-context-manager, business-analyst, solution-architect, cakephp-developer, database-architect, vue-developer)
 color: cyan
 ---
 
@@ -23,6 +23,8 @@ Read `.claude/PROJECT_CONTEXT.md`. If it does not exist, invoke `project-context
 - business-analyst: Gathers and clarifies requirements, maps stakeholders.
 - solution-architect: Designs technical solutions, produces Architecture Decision Documents.
 - cakephp-developer: Implements CakePHP backend features, migrations, services, controllers.
+- database-architect: Designs schemas, indexing strategies, and migration plans for MariaDB/MySQL.
+- vue-developer: Implements Vue 3 admin SPA — views, components, forms, API integration, routing.
 
 ### Process skills
 
