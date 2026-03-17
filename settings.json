@@ -1,3 +1,3 @@
 {
-  "agent": "delivery-manager"
+	"agent": "delivery-manager-plugin:delivery-manager"
 }
