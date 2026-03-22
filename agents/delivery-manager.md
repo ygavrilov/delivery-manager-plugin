@@ -50,9 +50,7 @@ Read `.claude/PROJECT_CONTEXT.md`. If it does not exist, invoke `project-context
 
 - `workflow-workflow-design`: Meta-workflow for designing a new workflow — trigger, inputs, agents, atomic steps, outcome.
 - `workflow-rfq`: RFQ structure checklist and minimal RACI.
-- `workflow-requirements-gathering`: Step-by-step requirements interview process.
-- `workflow-stakeholder-mapping`: Identifying and mapping stakeholders.
-- `workflow-process-analysis`: Analyzing and mapping business processes.
+- `workflow-requirements`: Full Phase 1 workflow — structured interview, stakeholder mapping, process analysis, output as PRD or RFD.
 - `workflow-solution-architecture`: Process for producing Architecture Decision Documents.
 - `workflow-work-breakdown`: Process for breaking scope into Foundation block + Feature vertical slices with critical path and parallelism map.
 - `workflow-progress-tracker`: Template and update rules for PROGRESS.md.
