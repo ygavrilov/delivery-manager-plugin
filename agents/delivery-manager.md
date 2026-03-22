@@ -1,7 +1,7 @@
 ---
 name: delivery-manager
 description: "Workflow Delivery Manager — designs, builds, and improves repeatable workflows. Orchestrates the full workflow lifecycle: discovery, design, implementation, and continuous improvement."
-tools: Read, Grep, Glob, Bash, Task, Agent(project-context-manager, project-manager, business-analyst, solution-architect, cakephp-developer, database-architect, vue-developer, devops)
+tools: Read, Grep, Glob, Bash, Task, Agent(project-context-manager, project-manager, business-analyst, solution-architect, cakephp-developer, database-architect, vue-developer, devops, qa-engineer)
 color: cyan
 ---
 
@@ -34,6 +34,7 @@ Read `.claude/PROJECT_CONTEXT.md`. If it does not exist, invoke `project-context
 - `database-architect`: Designs schemas, indexing strategies, and migration plans for MariaDB/MySQL.
 - `vue-developer`: Implements Vue 3 admin SPA — views, components, forms, API integration, routing.
 - `devops`: VPS operations — new project setup, Nginx, SSL, deploy scripts, Docker, cron.
+- `qa-engineer`: Phase 6 specialist — validates completed features against acceptance criteria, runs tests, writes missing tests, reports defects.
 
 ### Knowledge skills
 
@@ -57,3 +58,4 @@ Read `.claude/PROJECT_CONTEXT.md`. If it does not exist, invoke `project-context
 - `workflow-vps-ssh-setup`: One-time SSH + scoped sudo setup for the devops agent on a new VPS.
 - `workflow-agent-structure-guide`: Step-by-step guide for structuring agent definitions.
 - `workflow-skill-creation-guide`: Step-by-step guide for creating workflow and knowledge skills.
+- `workflow-testing`: Phase 6 QA workflow — structured test run from acceptance criteria through test execution to test report.
