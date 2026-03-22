@@ -1,5 +1,6 @@
 ---
-name: process-analysis
+name: workflow-process-analysis
+type: workflow
 description: Guide for analyzing business processes and identifying improvements
 context: fork
 ---

@@ -1,5 +1,6 @@
 ---
-name: rfq-knowledge
+name: workflow-rfq
+type: workflow
 argument-hint: "[rfq-title]"
 description: RFQ structure checklist: process + minimal RACI.
 ---

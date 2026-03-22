@@ -1,5 +1,6 @@
 ---
-name: requirements-gathering
+name: workflow-requirements-gathering
+type: workflow
 description: Step-by-step guide for gathering and clarifying requirements
 context: fork
 ---

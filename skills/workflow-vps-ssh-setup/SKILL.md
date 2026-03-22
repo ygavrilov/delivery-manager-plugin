@@ -1,5 +1,6 @@
 ---
-name: vps-ssh-setup
+name: workflow-vps-ssh-setup
+type: workflow
 description: One-time setup to give the devops agent SSH + scoped sudo access to a VPS. Follow once per VPS, then record connection details in PROJECT_CONTEXT.md.
 ---
 

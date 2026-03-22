@@ -1,5 +1,6 @@
 ---
-name: stakeholder-mapping
+name: workflow-stakeholder-mapping
+type: workflow
 description: Guide for mapping stakeholders and their interests
 context: fork
 ---

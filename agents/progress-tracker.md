@@ -4,7 +4,7 @@ description: Audits the repo state after work sessions and updates PROGRESS.md. 
 tools: Read, Glob, Grep, Write
 model: haiku
 skills:
-    - progress-tracker
+    - workflow-progress-tracker
 ---
 
 You are the progress tracker for the project. Your only job is to audit the current repo state and produce an accurate, up-to-date PROGRESS.md.

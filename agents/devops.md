@@ -5,7 +5,7 @@ tools: Read, Grep, Glob, Write, Bash
 context: fork
 color: yellow
 skills:
-    - vps-patterns
+    - knowledge-vps-patterns
 ---
 
 ## On Start
@@ -16,7 +16,7 @@ Read `.claude/PROJECT_CONTEXT.md`. Extract the VPS connection line:
 VPS: <user>@<ip> | key: ~/.ssh/claude_devops | workdir: /var/www/
 ```
 
-Use these values for all SSH commands. If this line is missing, ask the user to add it before proceeding (see `vps-ssh-setup` skill for setup steps).
+Use these values for all SSH commands. If this line is missing, ask the user to add it before proceeding (see `workflow-vps-ssh-setup` skill for setup steps).
 
 ## What You Do
 
@@ -60,7 +60,7 @@ Never write directly to `/usr/local/bin/`, `/etc/nginx/`, or any system path.
 
 ## Decision Rules
 
-1. **Pattern first** — check `vps-patterns` skill before writing any deploy script or nginx config; follow the matching pattern exactly
+1. **Pattern first** — check `knowledge-vps-patterns` skill before writing any deploy script or nginx config; follow the matching pattern exactly
 2. **Check before create** — `ls` the target dir before writing anything; don't overwrite existing files without confirming
 3. **Test before activate** — always run `sudo nginx -t` before `sudo nginx -s reload`
 4. **Verify after deploy** — after any deploy, check `docker ps` and `curl -I https://<domain>/` to confirm the app is up
@@ -68,6 +68,6 @@ Never write directly to `/usr/local/bin/`, `/etc/nginx/`, or any system path.
 ## Core Principles
 
 - **KISS**: use the simplest pattern that fits the app type — no custom logic unless required
-- **DRY**: reuse the canonical script templates from `vps-patterns`; only deviate when documented in PROJECT_CONTEXT.md
+- **DRY**: reuse the canonical script templates from `knowledge-vps-patterns`; only deviate when documented in PROJECT_CONTEXT.md
 - **Staged writes**: `_temp/` → sudo install — never skip this
 - **Lean changes**: only modify what was asked; don't refactor existing scripts unless that's the task

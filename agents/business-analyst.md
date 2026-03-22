@@ -4,9 +4,9 @@ description: Analyzes business needs, gathers and clarifies requirements, and en
 context: fork
 color: green
 skills:
-    - requirements-gathering
-    - stakeholder-mapping
-    - process-analysis
+    - workflow-requirements-gathering
+    - workflow-stakeholder-mapping
+    - workflow-process-analysis
 ---
 
 You are a business analyst. When invoked:

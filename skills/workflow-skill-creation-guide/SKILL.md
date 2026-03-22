@@ -1,5 +1,6 @@
 ---
-name: skill-creation-guide
+name: workflow-skill-creation-guide
+type: workflow
 description: Step-by-step guide for creating Claude skills
 context: fork
 ---
@@ -39,7 +40,8 @@ A skill directory must contain:
 
 ```yaml
 ---
-name: migrate-component
+name: workflow-skill-creation-guide
+type: workflow
 description: Migrate a component from one framework to another
 ---
 Migrate the $0 component from $1 to $2.

@@ -1,5 +1,6 @@
 ---
-name: agent-structure-guide
+name: workflow-agent-structure-guide
+type: workflow
 description: Step-by-step guide for structuring Claude subagents
 context: fork
 ---
@@ -34,7 +35,8 @@ A subagent directory must contain:
 
 ```markdown
 ---
-name: code-reviewer
+name: workflow-agent-structure-guide
+type: workflow
 description: Reviews code for quality and best practices
 tools: Read, Glob, Grep
 model: sonnet

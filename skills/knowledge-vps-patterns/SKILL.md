@@ -1,5 +1,6 @@
 ---
-name: vps-patterns
+name: knowledge-vps-patterns
+type: knowledge
 description: Reference for VPS infrastructure patterns — directory layout, CI/CD model, and the four deployment patterns. No project-specific values; read PROJECT_CONTEXT.md for those.
 ---
 

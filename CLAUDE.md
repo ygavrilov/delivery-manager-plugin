@@ -22,14 +22,15 @@ settings.json    — Plugin entry point: sets default agent to delivery-manager
 **Agents** are role-based specialists with defined tool access. Each agent `.md` file has YAML frontmatter (`name`, `description`, `tools`, `context`, `color`, optional `skills`) followed by a system prompt.
 
 **Skills** are reusable instructions loaded by agents. Two types:
-- **Process skills** — step-by-step procedures (e.g. `solution-architecture`, `work-breakdown`, `rfq-knowledge`)
-- **Expertise skills** — domain knowledge and patterns (e.g. `cakephp-architecture`)
+- **Workflow skills** (`workflow-*`) — step-by-step guides for executing a specific process (e.g. `workflow-work-breakdown`, `workflow-solution-architecture`)
+- **Knowledge skills** (`knowledge-*`) — reference material that dictates how things should be: patterns, templates, schemas (e.g. `knowledge-cakephp-architecture`, `knowledge-prd`)
 
 ### Agent Hierarchy
 
 ```
-delivery-manager          ← orchestrator; reads PROJECT_CONTEXT.md on start
+delivery-manager          ← workflow lifecycle owner: design, build, improve
 ├── project-context-manager   ← creates/maintains .claude/PROJECT_CONTEXT.md
+├── project-manager           ← executes a specific project; tracks progress, coordinates agents
 ├── business-analyst          ← requirements gathering, stakeholder mapping
 ├── solution-architect        ← architecture decisions (no code); produces ADDs
 ├── cakephp-developer         ← backend implementation (CakePHP 5.0+)
@@ -37,6 +38,10 @@ delivery-manager          ← orchestrator; reads PROJECT_CONTEXT.md on start
 ├── vue-developer             ← admin SPA (Vue 3, Composition API, no UI libs)
 └── devops                    ← VPS operations via SSH (nginx, SSL, deploy scripts, Docker)
 ```
+
+**Delivery Manager vs Project Manager:**
+- `delivery-manager` owns the workflow system — it designs new workflows, builds skills, and improves existing ones. It does not manage day-to-day project tasks.
+- `project-manager` handles execution of a specific project — coordinating agents, tracking progress, resolving blockers within an established workflow.
 
 ### PROJECT_CONTEXT.md
 

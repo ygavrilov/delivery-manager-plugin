@@ -1,5 +1,6 @@
 ---
-name: progress-tracker
+name: workflow-progress-tracker
+type: workflow
 description: Template and update rules for maintaining PROGRESS.md. Updated by agents reporting task completion — no file inference.
 user-invocable: false
 allowed-tools: Read, Write

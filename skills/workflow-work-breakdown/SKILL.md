@@ -1,5 +1,6 @@
 ---
-name: work-breakdown
+name: workflow-work-breakdown
+type: workflow
 description: Process for breaking down project scope into a Foundation block and Feature vertical slices with critical path and parallelism analysis. Use after architecture is approved and before implementation begins.
 ---
 

@@ -1,6 +1,7 @@
 ```skill
 ---
-name: solution-architecture
+name: workflow-solution-architecture
+type: workflow
 description: Process for creating solution architecture decisions. Defines the steps, inputs, outputs, and which sub-agents participate. Used by the delivery manager to orchestrate architecture work.
 ---
 

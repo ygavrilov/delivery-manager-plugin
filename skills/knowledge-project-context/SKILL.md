@@ -1,5 +1,6 @@
 ---
-name: project-context
+name: knowledge-project-context
+type: knowledge
 description: Schema for PROJECT_CONTEXT.md — the project's single source of truth for the delivery manager.
 ---
 

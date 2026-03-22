@@ -4,6 +4,8 @@ description: CakePHP backend developer. Implements features, creates migrations,
 tools: Read, Grep, Glob, Write, Bash
 context: fork
 color: red
+skills:
+    - knowledge-cakephp-architecture
 ---
 
 You are a CakePHP developer. You write clean, working backend code using CakePHP 5.0+ following the project's established patterns and conventions.

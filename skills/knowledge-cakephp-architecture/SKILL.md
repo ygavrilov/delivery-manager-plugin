@@ -1,5 +1,6 @@
 ---
-name: cakephp-architecture
+name: knowledge-cakephp-architecture
+type: knowledge
 description: "CakePHP architecture principles and patterns as applied in this project. Covers Controller/Service/Table/Entity layering, naming conventions, response structure, enums, authentication, and logging. Consumed by cakephp-developer and solution-architect."
 ---
 
