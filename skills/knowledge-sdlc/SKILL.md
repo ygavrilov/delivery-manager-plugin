@@ -14,9 +14,9 @@ description: End-to-end SDLC process map. Defines all phases, deliverables, acce
 | 1 | Requirements | Covered | business-analyst | PRD or RFD |
 | 2 | Architecture | Covered | solution-architect | ADD |
 | 3 | Planning | Covered | delivery-manager | WBD.md |
-| 4 | Specification | ⚠️ Not covered | project-context-manager | PROJECT_CONTEXT.md (fully populated) |
+| 4 | Specification | Covered | project-context-manager | PROJECT_CONTEXT.md (fully populated) |
 | 5 | Development | Covered | cakephp-developer / vue-developer / devops | Working feature code + PROGRESS.md |
-| 6 | Testing | ⚠️ Not covered | QA agent (to be created) | Test report |
+| 6 | Testing | Covered | qa-engineer | Test report |
 | 7 | Deployment | Partial | devops | Production deployment |
 | 8 | Maintenance | ⚠️ Not covered | all developer agents | Change or incident resolved |
 

@@ -54,6 +54,7 @@ Read `.claude/PROJECT_CONTEXT.md`. If it does not exist, invoke `project-context
 - `workflow-requirements`: Full Phase 1 workflow — structured interview, stakeholder mapping, process analysis, output as PRD or RFD.
 - `workflow-solution-architecture`: Process for producing Architecture Decision Documents.
 - `workflow-work-breakdown`: Process for breaking scope into Foundation block + Feature vertical slices with critical path and parallelism map.
+- `workflow-specification`: Phase 4 workflow — translates PRD + ADD + WBD into a fully-populated PROJECT_CONTEXT.md. Trigger after WBD is approved by invoking `project-context-manager` with the three input documents.
 - `workflow-progress-tracker`: Template and update rules for PROGRESS.md.
 - `workflow-vps-ssh-setup`: One-time SSH + scoped sudo setup for the devops agent on a new VPS.
 - `workflow-agent-structure-guide`: Step-by-step guide for structuring agent definitions.

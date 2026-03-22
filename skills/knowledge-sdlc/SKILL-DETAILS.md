@@ -104,7 +104,7 @@ Break the approved architecture into an executable work breakdown. Identify the 
 
 ## Phase 4 — Specification
 
-**Status**: ⚠️ Not covered — skill and process to be defined
+**Status**: Covered
 
 Translate the WBD into execution-ready context. Fill in all concrete details that agents need to actually build: domain names, folder structure, port ranges, container names, database credentials pattern, environment file locations. Without this phase, agents have to guess at specifics.
 
@@ -120,9 +120,9 @@ Translate the WBD into execution-ready context. Fill in all concrete details tha
 - All open questions from WBD resolved
 
 ### Agents & Skills
-- `project-context-manager` — creates and updates PROJECT_CONTEXT.md
-- `project-context` skill — schema for PROJECT_CONTEXT.md
-- **Specification interview skill** — ⚠️ to be created
+- `project-context-manager` — creates and populates PROJECT_CONTEXT.md
+- `knowledge-project-context` skill — schema for PROJECT_CONTEXT.md
+- `workflow-specification` skill — Phase 4 interview process; extracts facts from PRD + ADD + WBD, interviews for gaps, verifies acceptance criteria
 
 ---
 
@@ -167,7 +167,7 @@ Progress tracked in parallel by `progress-tracker` skill — agents report compl
 
 ## Phase 6 — Testing
 
-**Status**: ⚠️ Not covered — agent and skill to be defined
+**Status**: Covered
 
 Verify that what was built matches acceptance criteria from Phase 1 and behaves correctly end-to-end.
 
@@ -180,8 +180,8 @@ Verify that what was built matches acceptance criteria from Phase 1 and behaves 
 - Performance acceptable (page load, API response times)
 
 ### Agents & Skills
-- **QA agent** — ⚠️ to be created
-- **Testing skill** — ⚠️ to be created
+- `qa-engineer` — validates completed features against acceptance criteria, runs tests, writes missing tests, reports defects
+- `workflow-testing` skill — Phase 6 QA workflow from acceptance criteria through test execution to test report
 
 ---
 
