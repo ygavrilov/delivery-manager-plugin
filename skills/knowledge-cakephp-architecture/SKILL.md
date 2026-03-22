@@ -6,6 +6,21 @@ description: "CakePHP architecture principles and patterns as applied in this pr
 
 # CakePHP Architecture — Project Conventions
 
+## Principles
+
+1. **Migrations always use `up()` and `down()`** — Never `change()`.
+2. **All schema changes go through migrations** — No manual SQL, no ALTER TABLE by hand.
+3. **Migration names follow `ActionTableColumn`** — e.g. `AddApiTokenToUsersTable`.
+4. **Every migration field has a `comment`** — No undocumented columns.
+5. **Foreign keys and indexes are named** — `fk_{table}_{field}` and `idx_{table}_{field}`.
+6. **Business logic lives in Services** — Tables hold queries and validation; controllers hold nothing but HTTP glue.
+7. **Controllers are thin** — Check method, get identity, get data, call service, return response. Nothing else.
+8. **API error handling is two-catch** — `InvalidArgumentException` → 400, `Exception` → 500. No other patterns.
+9. **Response shape is fixed** — Success: `{success, message, data}`. Error: `{success, message, error_code}`.
+10. **Authentication uses the CakePHP Authentication plugin** — Never check auth manually in a controller.
+11. **Browser session auth uses cookies only** — No bearer tokens for browser-based sessions.
+12. **Bake models after every migration** — Never let code drift from schema.
+
 ## Core Philosophy
 
 - **KISS**: simplest approach first — no features, configurability, or abstractions beyond what was asked
