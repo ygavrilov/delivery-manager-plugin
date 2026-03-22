@@ -37,6 +37,7 @@ Read `.claude/PROJECT_CONTEXT.md`. If it does not exist, invoke `project-context
 
 ### Knowledge skills
 
+- `knowledge-principles`: Core principles that guide all agent and workflow decisions in this system.
 - `knowledge-sdlc`: End-to-end SDLC process map — all phases, deliverables, acceptance criteria, and coverage status.
 - `knowledge-project-context`: Schema for `PROJECT_CONTEXT.md`.
 - `knowledge-prd`: Template for a Product Requirements Document.
