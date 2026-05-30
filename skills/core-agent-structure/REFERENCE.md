@@ -15,8 +15,8 @@ A subagent directory must contain:
 
 ```markdown
 ---
-name: workflow-agent-structure-guide
-type: workflow
+name: core-agent-structure
+category: core
 description: Reviews code for quality and best practices
 tools: Read, Glob, Grep
 model: sonnet

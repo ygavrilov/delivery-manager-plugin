@@ -120,9 +120,9 @@ Translate the WBD into execution-ready context. Fill in all concrete details tha
 - All open questions from WBD resolved
 
 ### Agents & Skills
-- `project-context-manager` — creates and populates PROJECT_CONTEXT.md
-- `knowledge-project-context` skill — schema for PROJECT_CONTEXT.md
-- `workflow-specification` skill — Phase 4 interview process; extracts facts from PRD + ADD + WBD, interviews for gaps, verifies acceptance criteria
+- `delivery-manager` — orchestrates Phase 4; dispatches to engineers
+- `core-project-context` skill — schema for PROJECT_CONTEXT.md
+- `core-specification` skill — Phase 4 interview process; extracts facts from PRD + ADD + WBD, interviews for gaps, verifies acceptance criteria
 
 ---
 
@@ -132,11 +132,11 @@ Translate the WBD into execution-ready context. Fill in all concrete details tha
 
 Agents execute WBD tasks in critical-path order. Progress is tracked in parallel. Each task is dispatched to the appropriate agent with PROJECT_CONTEXT.md and the task description as context.
 
-Owner mapping from WBD to agents:
-- `backend` → `cakephp-developer`
-- `frontend` → `vue-developer`
-- `devops` → `devops`
-- `database` → `database-architect` (design) + `cakephp-developer` (migration)
+Owner mapping from WBD to engineers:
+- `backend` → `lead-engineer` or `senior-engineer` + `framework-cakephp` skill
+- `frontend` → `lead-engineer` or `senior-engineer` + `framework-vuejs` skill
+- `devops` → `senior-engineer` + `core-vps` skill
+- `database` → `lead-engineer` + `core-database` skill
 
 Progress tracked in parallel by `progress-tracker` skill — agents report completion, PROGRESS.md is updated after each task.
 
@@ -144,7 +144,7 @@ Progress tracked in parallel by `progress-tracker` skill — agents report compl
 
 #### Working feature code (per WBD task)
 - Task matches the definition in WBD.md
-- Follows patterns from the relevant expertise skill (`cakephp-architecture`, `vps-patterns`)
+- Follows patterns from the relevant skill (`framework-cakephp`, `core-vps`)
 - Migrations run without error
 - No regressions in previously completed tasks
 
@@ -154,13 +154,12 @@ Progress tracked in parallel by `progress-tracker` skill — agents report compl
 - `Last updated` date current
 
 ### Agents & Skills
-- `cakephp-developer` — backend features, migrations, services, controllers
-- `vue-developer` — admin SPA views, components, forms, routing
-- `devops` — infrastructure, nginx, SSL, deploy scripts, Docker
-- `database-architect` — schema and index design before migration is written
-- `cakephp-architecture` skill — CakePHP patterns consumed by cakephp-developer
-- `vps-patterns` skill — VPS conventions consumed by devops
-- `progress-tracker` skill — PROGRESS.md maintenance
+- `lead-engineer` / `senior-engineer` — all implementation tasks (backend, frontend, DB, infra)
+- `framework-cakephp` skill — CakePHP patterns
+- `framework-vuejs` skill — Vue.js patterns
+- `core-vps` skill — VPS and deployment conventions
+- `core-database` skill — schema and migration rules
+- `core-progress-tracker` skill — PROGRESS.md maintenance
 - **WBD execution skill** — ⚠️ to be created (orchestration logic for dispatching tasks in order)
 
 ---
@@ -180,8 +179,8 @@ Verify that what was built matches acceptance criteria from Phase 1 and behaves 
 - Performance acceptable (page load, API response times)
 
 ### Agents & Skills
-- `qa-engineer` — validates completed features against acceptance criteria, runs tests, writes missing tests, reports defects
-- `workflow-testing` skill — Phase 6 QA workflow from acceptance criteria through test execution to test report
+- `senior-engineer` — validates features against acceptance criteria, runs tests, writes missing tests, reports defects
+- `core-testing` skill — Phase 6 QA workflow from acceptance criteria through test execution to test report
 
 ---
 

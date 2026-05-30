@@ -1,8 +1,3 @@
----
-name: workflow-requirements-details
-description: Full step-by-step detail for the requirements workflow — interview questions, stakeholder mapping table, process analysis, and PRD/RFD completion instructions.
----
-
 # Workflow: Requirements Gathering — Full Detail
 
 ## Step 1: Classify the Request
@@ -82,7 +77,7 @@ Document the current state before defining the future state. Keep this concise.
 
 ### If PRD (user-facing feature):
 
-Use the `knowledge-prd` template. Fill in every section:
+Use the `core-prd` template. Fill in every section:
 
 - **Problem / Opportunity**: one paragraph using the answer to interview question 1.
 - **Users**: from question 2.
@@ -93,7 +88,7 @@ Use the `knowledge-prd` template. Fill in every section:
 
 ### If RFD (technical improvement):
 
-Use the `knowledge-rfd` template. Fill in every section:
+Use the `core-rfd` template. Fill in every section:
 
 - **Problem Statement**: one paragraph using questions 1 and 6.
 - **Proposed Change**: what will be done — no implementation detail yet, just intent.

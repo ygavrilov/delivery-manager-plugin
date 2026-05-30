@@ -29,7 +29,7 @@ Ask only about gaps. Max 8 questions. Use table below.
 | Open questions | Are there any open questions from the WBD that still need resolution? |
 
 ### Step 4 — Populate PROJECT_CONTEXT.md
-Use schema from `rules-project-context`. One-liners only, no prose.
+Use schema from `core-project-context`. One-liners only, no prose.
 
 ### Step 5 — Verify completeness
 Check all Phase 4 acceptance criteria below.
@@ -56,7 +56,7 @@ Save to `.claude/PROJECT_CONTEXT.md`.
 ## Rules
 
 - **No guessing**: if a fact is not confirmed, ask — never fill in a plausible value
-- **Schema fidelity**: follow `rules-project-context` schema exactly
+- **Schema fidelity**: follow `core-project-context` schema exactly
 - **One-liners only**: no prose, no paragraphs in the output file
 - **Confirmed only**: Stack and Constraints must only contain explicitly decided facts
 - **Minimal questions**: extract as much as possible from documents before interviewing

@@ -82,7 +82,7 @@ Describe the final artifact(s) or state produced by running this workflow end-to
 ## Step 9: Write the Workflow Skill File
 
 **Input:** All outputs from Steps 1–8
-**Output:** `workflow-<name>/SKILL.md` — a ready-to-use workflow skill
+**Output:** `{category}-<name>/SKILL.md` — a ready-to-use workflow skill
 **Instructions:**
 Create a new skill file using the standard structure:
 1. YAML frontmatter: `name`, `description`
@@ -92,7 +92,7 @@ Create a new skill file using the standard structure:
 5. **Steps** section — each step with Input, Output, Instructions (from Step 7)
 6. **Outcome** section (from Step 8)
 
-Name the file `workflow-<kebab-case-name>/SKILL.md` and place it in the `skills/` directory.
+Name the file `{category}-<kebab-case-name>/SKILL.md` and place it in the `skills/` directory.
 
 ---
 

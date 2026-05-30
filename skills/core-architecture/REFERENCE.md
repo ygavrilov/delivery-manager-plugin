@@ -9,7 +9,7 @@
 5. **Recommend one** — the simplest that meets all requirements (KISS)
 6. **Define integration points** — API contracts, data shapes, how layers communicate
 7. **Identify risks** — dependencies, failure modes, rollback path
-8. **Document** — produce ADD following `workflow-solution-architecture` format
+8. **Document** — produce ADD following `core-solution-architecture` format
 
 ## Domain Knowledge Map
 
