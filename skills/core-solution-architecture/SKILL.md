@@ -7,4 +7,4 @@ worker-hint: lead
 
 Six-step process: context review, requirements clarification, options analysis (2–3 approaches), technical deep-dive per layer, SEO/performance review, and ADD documentation. Load when designing a solution spanning multiple layers.
 
-See `REFERENCE.md` for the full ADD template and RACI.
+See @REFERENCE.md for the full ADD template and RACI.

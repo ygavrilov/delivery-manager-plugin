@@ -6,4 +6,4 @@ description: Schema and rules for PROJECT_CONTEXT.md — the canonical project r
 
 Defines structure and authoring rules for PROJECT_CONTEXT.md: file location, schema, and field-level constraints. Load when creating, populating, or validating PROJECT_CONTEXT.md.
 
-See `REFERENCE.md` for schema, field rules, and location.
+See @REFERENCE.md for schema, field rules, and location.

@@ -32,7 +32,7 @@ worker-hint: lead | senior | junior   # optional
 ```
 
 Body: 2–3 sentences (what it covers, when to load it).
-Final line: `See \`REFERENCE.md\` for [what's in the reference file].`
+Final line: `See @REFERENCE.md for [what's in the reference file].`
 
 ### Frontmatter fields
 
@@ -48,7 +48,7 @@ Final line: `See \`REFERENCE.md\` for [what's in the reference file].`
 - 2–3 sentences maximum — no headings, no lists, prose only
 - First sentence: what this skill covers
 - Second sentence: when to load it
-- Last line: reference to REFERENCE.md — what's in there
+- Last line: `See @REFERENCE.md for ...` — use `@` so Claude resolves the file
 
 ## REFERENCE.md Format
 

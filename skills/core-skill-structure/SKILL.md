@@ -9,4 +9,4 @@ Meta-skill for skill authoring. Covers four skill categories (core, lang, framew
 
 Load when creating or updating any skill.
 
-See `REFERENCE.md` for full conventions, frontmatter schema, and examples.
+See @REFERENCE.md for full conventions, frontmatter schema, and examples.
