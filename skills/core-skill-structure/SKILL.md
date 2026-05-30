@@ -5,8 +5,10 @@ description: Defines how skills are structured, authored, and referenced in this
 worker-hint: senior
 ---
 
-Meta-skill for skill authoring. Covers four skill categories (core, lang, framework, project), file structure (SKILL.md + REFERENCE.md), frontmatter schema, and body conventions.
+Meta-skill for skill authoring. Covers four skill categories (core, lang, framework, project), file structure (SKILL.md + reference.md + optional extras), frontmatter schema, and body conventions.
 
 Load when creating or updating any skill.
 
-See @REFERENCE.md for full conventions, frontmatter schema, and examples.
+## Additional Resources
+
+- For full conventions, frontmatter schema, and examples, see [reference.md](reference.md)

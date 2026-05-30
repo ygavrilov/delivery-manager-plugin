@@ -7,4 +7,6 @@ worker-hint: lead
 
 Process for creating workflows that don't exist yet: define trigger and inputs, identify participants, specify atomic steps with inputs/outputs, define done criteria. Load when a needed workflow is missing.
 
-See @REFERENCE.md for full design process and workflow document template.
+## Additional Resources
+
+- For full design process and workflow document template, see [reference.md](reference.md)

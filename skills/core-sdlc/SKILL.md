@@ -6,4 +6,6 @@ description: End-to-end SDLC process map — phases 0–8 with deliverables, acc
 
 SDLC phases 0–8 with primary agents, key deliverables, and coverage status. Load to determine which phase a project is in, what comes next, and which skills handle each phase.
 
-See @REFERENCE.md for full phase definitions, deliverables, and acceptance criteria per phase.
+## Additional Resources
+
+- For full phase definitions, deliverables, and acceptance criteria per phase, see [reference.md](reference.md)

@@ -6,4 +6,6 @@ description: Template for a Product Requirements Document — user-facing featur
 
 PRD template covering problem, users, scope, requirements, success criteria, and open questions. Load when writing or reviewing a PRD.
 
-See @REFERENCE.md for the full template.
+## Additional Resources
+
+- For the full template, see [reference.md](reference.md)

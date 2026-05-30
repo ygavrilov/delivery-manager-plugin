@@ -38,8 +38,10 @@ Four categories. Every skill is a directory with exactly two files:
 
 ```
 skills/{category}-{slug}/
-  SKILL.md       ← frontmatter + 2–3 sentence summary
-  REFERENCE.md   ← full content (steps, rules, examples, templates)
+  SKILL.md       ← required: overview + navigation (under 500 lines)
+  reference.md   ← detailed content — loaded on demand
+  examples.md    ← examples — loaded on demand (optional)
+  scripts/       ← utility scripts — executed, not loaded (optional)
 ```
 
 | Category | Prefix | Purpose | Location |

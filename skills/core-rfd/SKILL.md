@@ -6,4 +6,6 @@ description: Template for a Request for Development — technical changes, integ
 
 RFD template covering problem statement, proposed change, scope, constraints, acceptance criteria, and open questions. Load when writing or reviewing an RFD.
 
-See @REFERENCE.md for the full template.
+## Additional Resources
+
+- For the full template, see [reference.md](reference.md)

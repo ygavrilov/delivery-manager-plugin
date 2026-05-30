@@ -7,4 +7,6 @@ worker-hint: lead
 
 Produces a Work Breakdown Document: Foundation block, Feature vertical slices (DB→API→UI), critical path, and parallelism map. Load after architecture is approved and before implementation begins.
 
-See @REFERENCE.md for full step-by-step process, WBD output template, and RACI.
+## Additional Resources
+
+- For full step-by-step process, WBD output template, and RACI, see [reference.md](reference.md)
