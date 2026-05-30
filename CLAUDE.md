@@ -1,79 +1,101 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code when working in this repository.
 
 ## What This Repo Is
 
-A **Claude Code plugin** (`delivery-manager-plugin` v2.0.0) — a collection of agents and skills that gets installed into other projects via `.claude-plugin/`. It is not a runnable application; there is no build step, test suite, or linter.
+A **Claude Code plugin** (`delivery-manager-plugin` v3.0.0) — agents and skills installed into other projects via `.claude-plugin/`. Not a runnable application; no build step, test suite, or linter.
 
-The plugin's entry point is `settings.json`, which declares `"agent": "delivery-manager"` as the default agent for any project that installs it.
+Plugin entry point: `settings.json` → declares `"agent": "delivery-manager"` as default agent.
 
 ## Repository Structure
 
 ```
-agents/          — Agent definitions (.md with YAML frontmatter)
-skills/          — Skill directories (each contains SKILL.md + REFERENCE.md)
-settings.json    — Plugin entry point: sets default agent to delivery-manager
-.claude-plugin/plugin.json — Plugin metadata (name, version, description, author)
+agents/                    — Agent definitions (.md with YAML frontmatter)
+skills/                    — Skill directories (each: SKILL.md + REFERENCE.md)
+settings.json              — Plugin entry point
+.claude-plugin/plugin.json — Plugin metadata (name, version, author)
+.claude/agents/            — Local sub-agents (semble-search)
 ```
 
-## Architecture: Orchestrator / Worker
+## Architecture: Orchestrator / Engineers
 
-**Delivery Manager** is the orchestrator. It owns context, selects skills, and dispatches tasks to workers.
+**Delivery Manager** is the orchestrator — owns context, selects skills, dispatches to engineers.
 
-**Workers** are execution agents — generic, forked, model-tiered:
+**Engineers** are execution agents — forked, model-tiered:
 
 | Agent | Model | Use for |
 |-------|-------|---------|
-| `hard-worker` | opus | Complex analysis, architecture, critical implementation |
-| `regular-worker` | sonnet | Standard tasks, documentation, routine implementation |
-| `laid-back-worker` | haiku | Simple edits, lookups, formatting, summarization |
+| `lead-engineer` | opus | Architecture, complex analysis, critical implementation |
+| `senior-engineer` | sonnet | Standard implementation, docs, moderate analysis |
+| `junior-engineer` | haiku | Minor edits, lookups, formatting, summarization |
 
-All workers use `context: fork` — they see only what the orchestrator passes them.
+All engineers use `context: fork` — see only what orchestrator passes them.
 
 ## Skills
 
-Two categories. Every skill is a directory with exactly two files:
+Four categories. Every skill is a directory with exactly two files:
 
 ```
 skills/{category}-{slug}/
-  SKILL.md       ← frontmatter + brief summary (2–3 sentences)
+  SKILL.md       ← frontmatter + 2–3 sentence summary
   REFERENCE.md   ← full content (steps, rules, examples, templates)
 ```
 
-| Category | Prefix | Purpose |
-|----------|--------|---------|
-| `workflow` | `workflow-` | Step-by-step process execution guides |
-| `rules` | `rules-` | Guidelines, patterns, and constraints for a type of work |
+| Category | Prefix | Purpose | Location |
+|----------|--------|---------|----------|
+| `core` | `core-` | How we work: processes, practices, standards | plugin |
+| `lang` | `lang-` | Language-specific patterns (php, typescript) | plugin |
+| `framework` | `framework-` | Framework patterns (cakephp, vuejs) | plugin |
+| `project` | `project-` | Per-project context | target project's `.claude/` |
 
-### Skill frontmatter convention
+### Skill frontmatter
 
 ```yaml
 ---
-name: {category}-{slug}       # must match directory name
-category: workflow | rules
+name: {category}-{slug}       # must match directory name exactly
+category: core | lang | framework | project
 description: One clear sentence.
-worker-hint: hard | regular | laid-back   # optional — guidance for orchestrator
+worker-hint: lead | senior | junior   # optional
 ---
 ```
 
+## Code Search
+
+Semble MCP is configured at user level (`search`, `find_related` tools). Use it for semantic code exploration — far cheaper than grep+read.
+
+```bash
+# CLI (workers use this)
+semble search "authentication flow" ./path/to/repo
+semble search "UserController" . --top-k 5
+semble find-related src/Controller/Users.php 42 .
+
+# MCP (delivery-manager uses this directly)
+search(query="entry points routing", repo="/path/to/repo")
+find_related(file_path="src/auth.php", line=12, repo="/path/to/repo")
+```
+
+**Rule:** semble before grep. Grep only for exhaustive exact-string matches.
+
+`semble-search` sub-agent available at `.claude/agents/semble-search.md` for dedicated search tasks.
+
 ## Adding or Modifying Content
 
-### New worker agent
-1. Create `agents/{name}.md` with frontmatter: `name`, `description`, `model`, `tools`, `context: fork`, `color`
-2. Write minimal system prompt: on-start steps, execution rules, what it does not do
+### New engineer agent
+1. Create `agents/{name}.md` — frontmatter: `name`, `description`, `model`, `tools`, `context: fork`, `color`
+2. Minimal system prompt: on-start steps, code search guidance, execution rules, what it does not do
 3. Register in `agents/delivery-manager.md` Workers table
 
 ### New skill
-1. Follow `rules-skill-master` — authoritative convention for skill structure
-2. Create `skills/{category}-{slug}/SKILL.md` with frontmatter + 2–3 sentence summary
-3. Create `skills/{category}-{slug}/REFERENCE.md` with full content
+1. Follow `core-skill-structure` — authoritative convention
+2. Create `skills/{category}-{slug}/SKILL.md` — frontmatter + 2–3 sentence summary
+3. Create `skills/{category}-{slug}/REFERENCE.md` — full content
 4. Register in `agents/delivery-manager.md` under appropriate skill category
 
 ## Key Conventions
 
-- **Orchestrator owns context** — delivery-manager does not fork; workers always fork
-- **Skills are the knowledge layer** — role-specific patterns live in rules-* skills, not in agents
-- **SKILL.md is light** — frontmatter + brief summary only; all detail in REFERENCE.md
-- **rules-skill-master is authoritative** — follow it when creating or updating any skill
+- **Orchestrator owns context** — delivery-manager does not fork; engineers always fork
+- **Specialist roles = skills** — BA, architect, QA knowledge lives in skills, not agents
+- **SKILL.md is light** — frontmatter + summary only; all detail in REFERENCE.md
+- **`core-skill-structure` is authoritative** — follow it for any skill work
 - **KISS and DRY** — simplest solution, no speculative abstractions
