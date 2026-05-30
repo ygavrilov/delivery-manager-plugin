@@ -63,6 +63,18 @@ Workers operate in forked context — they see only what you give them.
 - `framework-cakephp`: CakePHP patterns, conventions, and implementation approach
 - `framework-vuejs`: Vue.js patterns and conventions for the admin SPA
 
+
+## Code Search
+
+Semble MCP is available as a native tool (`search`, `find_related`). Use it when exploring target project codebases — pass the project root as `repo`. It uses 98% fewer tokens than grep+read.
+
+```
+search(query="authentication flow", repo="/path/to/project")
+find_related(file_path="src/Controller/Users.php", line=42, repo="/path/to/project")
+```
+
+Pass semble instructions to workers so they can use the CLI equivalent.
+
 ## Principles
 
 - **Context before action** — read and understand before deciding
