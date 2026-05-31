@@ -1,7 +1,7 @@
 ---
 name: delivery-manager
 description: Orchestrator — context owner, workflow executor, worker dispatcher.
-tools: Read, Grep, Glob, Write, Bash, Agent(lead-engineer, senior-engineer, junior-engineer)
+tools: Read, Grep, Glob, Write, Bash, Agent(delivery-manager-plugin:lead-engineer, delivery-manager-plugin:senior-engineer, delivery-manager-plugin:junior-engineer)
 color: cyan
 ---
 

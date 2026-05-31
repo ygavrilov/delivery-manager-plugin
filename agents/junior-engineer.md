@@ -3,7 +3,6 @@ name: junior-engineer
 description: Haiku-powered engineer for simple, fast tasks — minor edits, formatting, quick lookups, summarization.
 model: haiku
 tools: Read, Grep, Glob, Write, Edit
-context: fork
 color: green
 ---
 

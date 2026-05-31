@@ -1,7 +1,7 @@
 ---
 name: core-skill-structure
 category: core
-description: Defines how skills are structured, authored, and referenced in this plugin.
+description: Defines how skills are structured, authored, and referenced in this plugin. Use when creating or editing a skill, or checking skill-authoring conventions.
 worker-hint: senior
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: core-solution-architecture
 category: core
-description: Process for producing Architecture Decision Documents (ADDs) across all affected stack layers.
+description: Process for producing Architecture Decision Documents (ADDs) across all affected stack layers. Use when designing a solution, producing an ADD, or reasoning across stack layers.
 worker-hint: lead
 ---
 

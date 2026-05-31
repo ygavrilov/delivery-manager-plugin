@@ -3,7 +3,6 @@ name: senior-engineer
 description: Sonnet-powered engineer for standard tasks — feature implementation, documentation, moderate analysis.
 model: sonnet
 tools: Read, Grep, Glob, Write, Edit, Bash
-context: fork
 color: yellow
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: core-database
 category: core
-description: Database schema design rules — normalization, column types, indexing, CakePHP ORM naming, and migration safety.
+description: Database schema design rules — normalization, column types, indexing, CakePHP ORM naming, and migration safety. Use when designing tables, choosing column types, adding indexes, or writing migrations.
 worker-hint: lead
 ---
 

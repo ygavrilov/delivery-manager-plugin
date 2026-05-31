@@ -1,7 +1,7 @@
 ---
 name: core-rfq
 category: core
-description: RFQ process — intake through handover with structure checklist and minimal RACI.
+description: RFQ process — intake through handover with structure checklist and minimal RACI. Use when handling an RFQ, scoping a quote request, or running intake-to-handover.
 ---
 
 Ten-step RFQ process: intake, qualification, discovery gate, scope, solution outline, estimate, plan, commercials, review, handover. Load when responding to or structuring an RFQ.

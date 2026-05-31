@@ -6,7 +6,7 @@ Guidance for Claude Code when working in this repository.
 
 A **Claude Code plugin** (`delivery-manager-plugin` v3.0.0) — agents and skills installed into other projects via `.claude-plugin/`. Not a runnable application; no build step, test suite, or linter.
 
-Plugin entry point: `settings.json` → declares `"agent": "delivery-manager"` as default agent.
+Plugin entry point: `settings.json` → declares `"agent": "delivery-manager-plugin:delivery-manager"` as default agent.
 
 ## Repository Structure
 

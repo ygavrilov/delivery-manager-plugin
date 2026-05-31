@@ -1,7 +1,7 @@
 ---
 name: core-specification
 category: core
-description: Phase 4 workflow — translates PRD + ADD + WBD into a fully-populated PROJECT_CONTEXT.md.
+description: Phase 4 workflow — translates PRD + ADD + WBD into a fully-populated PROJECT_CONTEXT.md. Use when writing the specification, or turning PRD/ADD/WBD inputs into PROJECT_CONTEXT.md.
 worker-hint: senior
 ---
 

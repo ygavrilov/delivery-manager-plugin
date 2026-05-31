@@ -3,7 +3,6 @@ name: lead-engineer
 description: Opus-powered engineer for complex, high-stakes tasks — deep reasoning, architecture analysis, critical implementation, multi-layer decisions.
 model: opus
 tools: Read, Grep, Glob, Write, Edit, Bash
-context: fork
 color: red
 ---
 
