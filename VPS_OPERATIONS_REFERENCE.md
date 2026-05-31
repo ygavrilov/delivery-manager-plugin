@@ -1182,7 +1182,7 @@ Runs every minute via cron. Checks all production sites and sends Telegram alert
 - 10-second timeout per check
 
 **Telegram config**:
-- Bot token: `7650098063:AAEJlxGKa1WJwTq2sH1ocHWtMjuzlPtvgz4`
+- Bot token: `YOUR_TELEGRAM_BOT_TOKEN`
 - Chat ID: `89050322`
 
 ### Database Backup (`/usr/local/bin/db-backup-rotate`)
