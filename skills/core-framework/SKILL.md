@@ -1,6 +1,7 @@
 ---
 name: core-framework
 category: core
+type: rule
 description: Core principles guiding all agent and workflow decisions in this plugin. Use when deciding how to approach a task, resolving trade-offs, or applying plugin-wide principles.
 ---
 

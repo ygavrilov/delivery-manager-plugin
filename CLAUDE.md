@@ -51,12 +51,15 @@ skills/{category}-{slug}/
 | `framework` | `framework-` | Framework patterns (cakephp, vuejs) | plugin |
 | `project` | `project-` | Per-project context | target project's `.claude/` |
 
+Every skill is also one of two **types** (`type:` frontmatter): `workflow` (the Delivery Manager runs it) or `rule` (a worker applies it). Skills are preloaded into agents via the `skills:` frontmatter; because each SKILL.md is skinny, agents select the right skill by its description and pull `reference.md` on demand.
+
 ### Skill frontmatter
 
 ```yaml
 ---
 name: {category}-{slug}       # must match directory name exactly
 category: core | lang | framework | project
+type: workflow | rule         # workflow = DM runs it; rule = worker applies it
 description: One clear sentence.
 worker-hint: lead | senior | junior   # optional
 ---
@@ -92,7 +95,8 @@ find_related(file_path="src/auth.php", line=12, repo="/path/to/repo")
 1. Follow `core-skill-structure` — authoritative convention
 2. Create `skills/{category}-{slug}/SKILL.md` — frontmatter + 2–3 sentence summary
 3. Create `skills/{category}-{slug}/REFERENCE.md` — full content
-4. Register in `agents/delivery-manager.md` under appropriate skill category
+4. Register in `agents/delivery-manager.md` under the matching `type` group (Workflows / Rules)
+5. Add the skill name to the `skills:` frontmatter of the agents that need it (workflows → `delivery-manager`; rules → the three engineers)
 
 ## Key Conventions
 

@@ -1,6 +1,7 @@
 ---
 name: core-rfq
 category: core
+type: workflow
 description: RFQ process — intake through handover with structure checklist and minimal RACI. Use when handling an RFQ, scoping a quote request, or running intake-to-handover.
 ---
 

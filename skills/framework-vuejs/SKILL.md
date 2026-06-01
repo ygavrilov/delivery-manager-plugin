@@ -1,6 +1,7 @@
 ---
 name: framework-vuejs
 category: framework
+type: rule
 description: Vue.js architecture patterns for the admin SPA — Composition API, Pinia, routing, and API integration. Use when building Vue admin SPA features, using Composition API or Pinia, routing, or integrating APIs.
 worker-hint: senior
 ---

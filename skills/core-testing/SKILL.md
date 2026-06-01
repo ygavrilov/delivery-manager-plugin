@@ -1,6 +1,7 @@
 ---
 name: core-testing
 category: core
+type: workflow
 description: Phase 6 QA workflow — acceptance criteria through test execution to verdict and test report. Use when planning or running QA, writing acceptance criteria, executing tests, or producing a test report.
 worker-hint: senior
 ---

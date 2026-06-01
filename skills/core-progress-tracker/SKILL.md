@@ -1,6 +1,7 @@
 ---
 name: core-progress-tracker
 category: core
+type: rule
 description: Template and update rules for PROGRESS.md — tracks task status across project phases. Use when creating or updating PROGRESS.md, or reporting task status across phases.
 ---
 

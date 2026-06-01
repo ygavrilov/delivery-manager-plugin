@@ -1,6 +1,7 @@
 ---
 name: core-requirements
 category: core
+type: workflow
 description: Phase 1 requirements workflow — structured interview, stakeholder mapping, and PRD or RFD output. Use when gathering requirements, running a discovery interview, mapping stakeholders, or producing a PRD/RFD.
 worker-hint: senior
 ---

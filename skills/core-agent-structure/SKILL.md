@@ -1,6 +1,7 @@
 ---
 name: core-agent-structure
 category: core
+type: rule
 description: Guide for structuring agent definitions — frontmatter fields, system prompt structure, and tool access. Use when creating or editing an agent definition, choosing frontmatter fields, or setting tool access.
 ---
 

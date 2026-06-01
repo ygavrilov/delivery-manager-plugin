@@ -1,6 +1,7 @@
 ---
 name: core-sdlc
 category: core
+type: rule
 description: End-to-end SDLC process map — phases 0–8 with deliverables, acceptance criteria, and skill assignments. Use when planning project phases, choosing the next deliverable, or locating which skill owns a phase.
 ---
 

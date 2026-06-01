@@ -1,6 +1,7 @@
 ---
 name: core-vps
 category: core
+type: rule
 description: VPS setup, conventions, directory layout, CI/CD model, four deployment patterns, and nginx rules. Use when setting up a VPS, deploying, configuring CI/CD, or writing nginx config.
 worker-hint: senior
 ---

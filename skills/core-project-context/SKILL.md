@@ -1,6 +1,7 @@
 ---
 name: core-project-context
 category: core
+type: rule
 description: Schema and rules for PROJECT_CONTEXT.md — the canonical project reference file. Use when creating, reading, or updating PROJECT_CONTEXT.md.
 ---
 

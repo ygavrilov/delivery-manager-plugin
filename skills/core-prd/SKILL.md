@@ -1,6 +1,7 @@
 ---
 name: core-prd
 category: core
+type: rule
 description: Template for a Product Requirements Document — user-facing features or new products. Use when writing a PRD, specifying user-facing features, or defining a new product.
 ---
 

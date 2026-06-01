@@ -1,6 +1,7 @@
 ---
 name: core-ingest-repo
 category: core
+type: workflow
 description: Analyze an existing project repo and produce a populated PROJECT_CONTEXT.md. Use when onboarding an existing codebase, or PROJECT_CONTEXT.md is missing and must be created.
 worker-hint: lead
 ---
